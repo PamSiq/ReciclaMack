@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReciclaMackIA - Reciclagem de Eletrônicos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      height: 100vh;
+    }
+    header {
+      background-color: #a40000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #ffffff;
+      border-right: 1px solid #ddd;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar img.logo {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+    .sidebar nav a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #a40000;
+      font-weight: bold;
+    }
+    .content {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    .article {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .chat-container {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 400px;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
+  <!-- Dialogflow Messenger script -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <img class="logo" src="https://i.imgur.com/Eyvx9MU.png" alt="Logo ReciclaMackIA">
+    <nav>
+      <a href="#artigo1">Por que reciclar eletrônicos?</a>
+      <a href="#artigo2">Impactos do lixo eletrônico</a>
+      <a href="#artigo3">Como descartar corretamente</a>
+    </nav>
+  </aside>
+
+  <div class="content">
+    <header>
+      <h1>ReciclaMackIA</h1>
+      <p>Seu blog educativo sobre reciclagem de eletrônicos 🌱</p>
+    </header>
+
+    <section id="artigo1" class="article">
+      <h2>Por que reciclar eletrônicos?</h2>
+      <p>A reciclagem de eletrônicos é essencial para evitar a poluição do solo e da água, além de recuperar materiais valiosos como metais e plásticos. Reciclar reduz a necessidade de extração de recursos naturais e diminui o impacto ambiental.</p>
+    </section>
+
+    <section id="artigo2" class="article">
+      <h2>Impactos do lixo eletrônico</h2>
+      <p>O descarte incorreto de lixo eletrônico libera substâncias tóxicas como chumbo, mercúrio e cádmio, prejudicando o meio ambiente e a saúde humana. A conscientização é o primeiro passo para mitigar esses danos.</p>
+    </section>
+
+    <section id="artigo3" class="article">
+      <h2>Como descartar corretamente</h2>
+      <p>Para descartar eletrônicos corretamente, procure pontos de coleta certificados. Antes do descarte, remova dados pessoais dos aparelhos. Contribuir para a reciclagem é também um ato de cidadania.</p>
+    </section>
+
+    <div class="chat-container">
+      <df-messenger
+        chat-title="ReciclaMackIA"
+        agent-id="f462d5d2-d21c-4c31-bb87-1a3ec0d2e8cf"
+        language-code="pt-br">
+      </df-messenger>
+    </div>
+  </div>
+</body>
+</html>
