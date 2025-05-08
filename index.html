@@ -1,55 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ReciclaMackIA - Reciclagem de Eletrônicos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
       display: flex;
       height: 100vh;
+      color: #333;
     }
+
     header {
       background-color: #a40000;
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
+
     .sidebar {
-      width: 220px;
+      width: 240px;
       background-color: #ffffff;
-      border-right: 1px solid #ddd;
-      padding: 1rem;
+      border-right: 1px solid #e0e0e0;
+      padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 1rem;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.03);
     }
+
     .sidebar img.logo {
       width: 100px;
       margin-bottom: 1rem;
     }
+
     .sidebar nav a {
       display: block;
-      margin: 10px 0;
+      margin: 8px 0;
+      padding: 0.6rem 1rem;
       text-decoration: none;
       color: #a40000;
-      font-weight: bold;
+      font-weight: 600;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
+
+    .sidebar nav a:hover {
+      background-color: #a40000;
+      color: white;
+      border-color: #a40000;
+      transform: translateX(5px);
+    }
+
     .content {
       flex: 1;
       padding: 2rem;
       overflow-y: auto;
     }
+
     .article {
       background: white;
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: #a40000;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
     .chat-container {
       margin-top: 2rem;
       width: 100%;
@@ -58,6 +106,28 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    /* Botão animado extra */
+    .animated-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #a40000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .animated-button:hover {
+      background-color: #d10000;
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
   </style>
 
   <!-- Dialogflow Messenger script -->
@@ -65,12 +135,13 @@
 </head>
 <body>
   <aside class="sidebar">
-    <img class="logo" src="https://i.imgur.com/Eyvx9MU.png" alt="Logo ReciclaMackIA">
+    <img class="logo" src="https://i.imgur.com/Eyvx9MU.png" alt="Logo ReciclaMackIA" />
     <nav>
       <a href="#artigo1">Por que reciclar eletrônicos?</a>
       <a href="#artigo2">Impactos do lixo eletrônico</a>
       <a href="#artigo3">Como descartar corretamente</a>
     </nav>
+    <button class="animated-button" onclick="alert('Você está ajudando o planeta!')">Quero ajudar 🌍</button>
   </aside>
 
   <div class="content">
@@ -104,3 +175,4 @@
   </div>
 </body>
 </html>
+
